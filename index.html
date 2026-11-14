@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>Taxi Gia Đình | Taxi TP.HCM, Bình Dương, Vũng Tàu</title>
+  <meta name="description" content="Taxi Gia Đình cung cấp dịch vụ đưa đón khách tại TP.HCM, khu vực Bình Dương và Bà Rịa – Vũng Tàu. Liên hệ trực tiếp với tài xế để tư vấn chuyến đi." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://taxigiadinh.vn/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://taxigiadinh.vn/" />
+  <meta property="og:title" content="Taxi Gia Đình | Taxi TP.HCM, Bình Dương, Vũng Tàu" />
+  <meta property="og:description" content="Taxi Gia Đình cung cấp dịch vụ đưa đón khách tại TP.HCM, khu vực Bình Dương và Bà Rịa – Vũng Tàu. Liên hệ trực tiếp với tài xế để tư vấn chuyến đi." />
+  <meta property="og:image" content="https://taxigiadinh.vn/assets/images/hero-car.webp" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:site_name" content="Taxi Gia Đình" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Taxi Gia Đình | Taxi TP.HCM, Bình Dương, Vũng Tàu" />
+  <meta name="twitter:description" content="Taxi Gia Đình cung cấp dịch vụ đưa đón khách tại TP.HCM, khu vực Bình Dương và Bà Rịa – Vũng Tàu." />
+  <meta name="twitter:image" content="https://taxigiadinh.vn/assets/images/hero-car.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.ico" />
+
+  <!-- Google Fonts: Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Taxi Gia Đình",
+    "description": "Dịch vụ taxi cá nhân chuyên nghiệp tại TP.HCM, khu vực Bình Dương và Bà Rịa – Vũng Tàu.",
+    "url": "https://taxigiadinh.vn",
+    "telephone": "+840900000000",
+    "slogan": "Mỗi chuyến đi, một sự an tâm",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Thành phố Hồ Chí Minh"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Bình Dương"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Bà Rịa – Vũng Tàu"
+      }
+    ],
+    "serviceType": [
+      "Taxi nội thành",
+      "Taxi đường dài",
+      "Đưa đón sân bay",
+      "Đưa đón theo yêu cầu"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+840900000000",
+      "availableLanguage": "Vietnamese"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="#hero" class="logo" aria-label="Taxi Gia Đình – Trang chủ">
+        <img src="assets/images/logo.svg" alt="Logo Taxi Gia Đình" width="40" height="40" />
+        <span class="logo-text">Taxi <strong>Gia Đình</strong></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" role="navigation" aria-label="Điều hướng chính">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Trang chủ</a></li>
+          <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+          <li><a href="#services" class="nav-link">Dịch vụ</a></li>
+          <li><a href="#vehicle" class="nav-link">Phương tiện</a></li>
+          <li><a href="#service-area" class="nav-link">Khu vực</a></li>
+          <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA Button Desktop -->
+      <a href="tel:0900000000" class="btn btn-primary header-cta" aria-label="Gọi ngay cho Taxi Gia Đình">
+        <i data-lucide="phone-call" aria-hidden="true"></i>
+        Gọi ngay
+      </a>
+
+      <!-- Hamburger Button Mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu di động" hidden>
+      <nav>
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-nav-link">Trang chủ</a></li>
+          <li><a href="#about" class="mobile-nav-link">Giới thiệu</a></li>
+          <li><a href="#services" class="mobile-nav-link">Dịch vụ</a></li>
+          <li><a href="#vehicle" class="mobile-nav-link">Phương tiện</a></li>
+          <li><a href="#service-area" class="mobile-nav-link">Khu vực hoạt động</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Liên hệ</a></li>
+          <li>
+            <a href="tel:0900000000" class="btn btn-primary mobile-nav-cta" aria-label="Gọi ngay cho Taxi Gia Đình">
+              <i data-lucide="phone-call" aria-hidden="true"></i>
+              Gọi ngay
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         SECTION 01: HERO
+    ============================================================ -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <!-- Left Column -->
+        <div class="hero-content reveal-left">
+          <span class="brand-badge">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            Taxi Gia Đình – Dịch vụ cá nhân chuyên nghiệp
+          </span>
+
+          <h1 class="hero-heading" id="hero-heading">
+            Di chuyển an tâm, đồng hành trên mọi hành trình.
+          </h1>
+
+          <p class="hero-desc">
+            Taxi Gia Đình cung cấp dịch vụ đưa đón tận nơi, phục vụ các chuyến đi nội thành, liên tỉnh và đường dài. Liên hệ trực tiếp với tài xế để được tư vấn lịch trình.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="tel:0900000000" class="btn btn-primary btn-large" aria-label="Gọi tài xế ngay">
+              <i data-lucide="phone-call" aria-hidden="true"></i>
+              GỌI TÀI XẾ NGAY
+            </a>
+            <a href="#services" class="btn btn-outline btn-large">
+              <i data-lucide="map" aria-hidden="true"></i>
+              KHÁM PHÁ DỊCH VỤ
+            </a>
+          </div>
+
+          <!-- Commitments -->
+          <div class="hero-commitments" aria-label="Các cam kết dịch vụ">
+            <div class="commitment-item">
+              <i data-lucide="shield" aria-hidden="true"></i>
+              <span>An toàn tuyệt đối</span>
+            </div>
+            <div class="commitment-item">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <span>Đúng giờ, tin cậy</span>
+            </div>
+            <div class="commitment-item">
+              <i data-lucide="wallet" aria-hidden="true"></i>
+              <span>Giá cước minh bạch</span>
+            </div>
+            <div class="commitment-item">
+              <i data-lucide="headphones" aria-hidden="true"></i>
+              <span>Phục vụ 24/7</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Hero Image -->
+        <div class="hero-image-wrap reveal-right">
+          <div class="hero-image-card">
+            <img
+              src="assets/images/hero-car_placeholder.svg"
+              alt="Xe taxi Taxi Gia Đình – dịch vụ đưa đón chuyên nghiệp tại TP.HCM, Bình Dương, Vũng Tàu"
+              class="hero-img"
+              width="600"
+              height="420"
+              fetchpriority="high"
+            />
+            <!-- Floating Badge -->
+            <div class="hero-badge hero-badge--left" aria-hidden="true">
+              <i data-lucide="star" aria-hidden="true"></i>
+              <div>
+                <strong>Dịch vụ uy tín</strong>
+                <span>Hàng nghìn chuyến đi</span>
+              </div>
+            </div>
+            <div class="hero-badge hero-badge--right" aria-hidden="true">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              <div>
+                <strong>3 khu vực</strong>
+                <span>TP.HCM · Bình Dương · Vũng Tàu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Decoration -->
+      <div class="hero-bg-deco" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 02: ABOUT
+    ============================================================ -->
+    <section class="about-section section-pad" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-inner">
+          <!-- Driver Image -->
+          <div class="about-image-wrap reveal-left">
+            <div class="about-image-card">
+              <img
+                src="assets/images/driver_placeholder.svg"
+                alt="Tài xế Taxi Gia Đình – thân thiện và chuyên nghiệp"
+                class="about-img"
+                width="480"
+                height="560"
+                loading="lazy"
+              />
+              <div class="about-exp-badge" aria-label="Kinh nghiệm lái xe">
+                <span class="exp-number">[X]+</span>
+                <span class="exp-label">Năm kinh nghiệm</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Content -->
+          <div class="about-content reveal-right">
+            <span class="section-eyebrow">Về chúng tôi</span>
+            <h2 class="section-title" id="about-heading">
+              Xin chào, tôi là tài xế của Taxi Gia Đình!
+            </h2>
+            <p class="section-desc">
+              Với mong muốn mang đến những chuyến đi thoải mái và an toàn, Taxi Gia Đình luôn chú trọng chất lượng phục vụ, sự đúng giờ và trải nghiệm của khách hàng.
+            </p>
+
+            <!-- Driver Info -->
+            <div class="driver-info-grid">
+              <div class="driver-info-item">
+                <i data-lucide="user" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Tên tài xế</span>
+                  <span class="info-value">[Tên tài xế]</span>
+                </div>
+              </div>
+              <div class="driver-info-item">
+                <i data-lucide="phone" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Liên hệ</span>
+                  <span class="info-value">0900.000.000</span>
+                </div>
+              </div>
+              <div class="driver-info-item">
+                <i data-lucide="award" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Kinh nghiệm</span>
+                  <span class="info-value">[X] năm lái xe chuyên nghiệp</span>
+                </div>
+              </div>
+              <div class="driver-info-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Khu vực</span>
+                  <span class="info-value">TP.HCM · Bình Dương · Vũng Tàu</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-note">
+              <i data-lucide="info" aria-hidden="true"></i>
+              <p>Thông tin tài xế sẽ được cập nhật đầy đủ. Vui lòng liên hệ trực tiếp để biết thêm chi tiết.</p>
+            </div>
+
+            <a href="#contact" class="btn btn-primary">
+              <i data-lucide="message-circle" aria-hidden="true"></i>
+              Liên hệ ngay
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 03: SERVICES
+    ============================================================ -->
+    <section class="services-section section-pad bg-light" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Dịch vụ</span>
+          <h2 class="section-title" id="services-heading">Chúng tôi phục vụ gì?</h2>
+          <p class="section-desc">Taxi Gia Đình cung cấp các dịch vụ đưa đón đa dạng, đáp ứng mọi nhu cầu di chuyển của bạn.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: Nội thành -->
+          <article class="service-card reveal-up" aria-label="Dịch vụ Taxi nội thành">
+            <div class="service-card-img-wrap">
+              <img
+                src="assets/images/services/urban_placeholder.svg"
+                alt="Taxi nội thành – đưa đón trong thành phố TP.HCM và Bình Dương"
+                class="service-card-img"
+                width="360"
+                height="220"
+                loading="lazy"
+              />
+              <div class="service-icon-wrap" aria-hidden="true">
+                <i data-lucide="car" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Taxi nội thành</h3>
+              <p class="service-card-desc">
+                Đưa đón nhanh chóng trong nội thành TP.HCM và khu vực Bình Dương. Đặt xe dễ dàng, giá cước rõ ràng, không lo kẹt xe.
+              </p>
+              <a href="tel:0900000000" class="btn btn-outline service-cta" aria-label="Liên hệ đặt taxi nội thành">
+                <i data-lucide="phone" aria-hidden="true"></i>
+                Liên hệ đặt xe
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Đường dài -->
+          <article class="service-card reveal-up" aria-label="Dịch vụ Taxi đường dài">
+            <div class="service-card-img-wrap">
+              <img
+                src="assets/images/services/highway_placeholder.svg"
+                alt="Taxi đường dài – taxi liên tỉnh TP.HCM, Bình Dương, Vũng Tàu"
+                class="service-card-img"
+                width="360"
+                height="220"
+                loading="lazy"
+              />
+              <div class="service-icon-wrap" aria-hidden="true">
+                <i data-lucide="route" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Taxi đường dài</h3>
+              <p class="service-card-desc">
+                Chuyến đi liên tỉnh thoải mái, an toàn. Phục vụ tuyến TP.HCM – Bình Dương – Bà Rịa Vũng Tàu và các tỉnh thành lân cận.
+              </p>
+              <a href="tel:0900000000" class="btn btn-outline service-cta" aria-label="Liên hệ đặt taxi đường dài">
+                <i data-lucide="phone" aria-hidden="true"></i>
+                Liên hệ đặt xe
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Sân bay -->
+          <article class="service-card reveal-up" aria-label="Dịch vụ Đưa đón sân bay">
+            <div class="service-card-img-wrap">
+              <img
+                src="assets/images/services/airport_placeholder.svg"
+                alt="Đưa đón sân bay Tân Sơn Nhất – taxi sân bay TP.HCM"
+                class="service-card-img"
+                width="360"
+                height="220"
+                loading="lazy"
+              />
+              <div class="service-icon-wrap" aria-hidden="true">
+                <i data-lucide="plane" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Đưa đón sân bay</h3>
+              <p class="service-card-desc">
+                Dịch vụ đưa đón chuyên nghiệp tại sân bay Tân Sơn Nhất. Đúng giờ, hỗ trợ hành lý, thoải mái trước và sau chuyến bay.
+              </p>
+              <a href="tel:0900000000" class="btn btn-outline service-cta" aria-label="Liên hệ đặt taxi đưa đón sân bay">
+                <i data-lucide="phone" aria-hidden="true"></i>
+                Liên hệ đặt xe
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Theo yêu cầu -->
+          <article class="service-card reveal-up" aria-label="Dịch vụ Đưa đón theo yêu cầu">
+            <div class="service-card-img-wrap">
+              <img
+                src="assets/images/services/custom_placeholder.svg"
+                alt="Taxi theo yêu cầu – dịch vụ đưa đón linh hoạt cho gia đình và công tác"
+                class="service-card-img"
+                width="360"
+                height="220"
+                loading="lazy"
+              />
+              <div class="service-icon-wrap" aria-hidden="true">
+                <i data-lucide="settings-2" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Đưa đón theo yêu cầu</h3>
+              <p class="service-card-desc">
+                Linh hoạt theo lịch trình riêng của bạn. Phù hợp cho gia đình đi du lịch, nhóm công tác và các nhu cầu di chuyển đặc biệt.
+              </p>
+              <a href="tel:0900000000" class="btn btn-outline service-cta" aria-label="Liên hệ đặt taxi theo yêu cầu">
+                <i data-lucide="phone" aria-hidden="true"></i>
+                Liên hệ đặt xe
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 04: VEHICLE
+    ============================================================ -->
+    <section class="vehicle-section section-pad" id="vehicle" aria-labelledby="vehicle-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Phương tiện</span>
+          <h2 class="section-title" id="vehicle-heading">Phương tiện đồng hành cùng bạn.</h2>
+          <p class="section-desc">Xe được bảo dưỡng định kỳ, sạch sẽ và trang bị đầy đủ tiện nghi cho mọi hành trình.</p>
+        </div>
+
+        <div class="vehicle-inner">
+          <!-- Vehicle Specs -->
+          <div class="vehicle-specs reveal-left">
+            <div class="vehicle-spec-list">
+              <div class="vehicle-spec-item">
+                <i data-lucide="car-front" aria-hidden="true"></i>
+                <div>
+                  <span class="spec-label">Hãng xe</span>
+                  <span class="spec-value">[Hãng xe – ví dụ: Toyota]</span>
+                </div>
+              </div>
+              <div class="vehicle-spec-item">
+                <i data-lucide="tag" aria-hidden="true"></i>
+                <div>
+                  <span class="spec-label">Dòng xe</span>
+                  <span class="spec-value">[Dòng xe – ví dụ: Vios / Innova]</span>
+                </div>
+              </div>
+              <div class="vehicle-spec-item">
+                <i data-lucide="users" aria-hidden="true"></i>
+                <div>
+                  <span class="spec-label">Số chỗ</span>
+                  <span class="spec-value">[X] chỗ ngồi</span>
+                </div>
+              </div>
+              <div class="vehicle-spec-item">
+                <i data-lucide="briefcase" aria-hidden="true"></i>
+                <div>
+                  <span class="spec-label">Hành lý</span>
+                  <span class="spec-value">[Mô tả không gian hành lý]</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amenities -->
+            <div class="vehicle-amenities">
+              <h3 class="amenities-title">Tiện nghi trên xe</h3>
+              <ul class="amenities-list" aria-label="Danh sách tiện nghi xe">
+                <li class="amenity-item">
+                  <i data-lucide="wind" aria-hidden="true"></i>
+                  <span>Điều hòa không khí</span>
+                </li>
+                <li class="amenity-item">
+                  <i data-lucide="wifi" aria-hidden="true"></i>
+                  <span>WiFi miễn phí [Nếu có]</span>
+                </li>
+                <li class="amenity-item">
+                  <i data-lucide="usb" aria-hidden="true"></i>
+                  <span>Sạc USB [Nếu có]</span>
+                </li>
+                <li class="amenity-item">
+                  <i data-lucide="shield-check" aria-hidden="true"></i>
+                  <span>Bảo hiểm đầy đủ</span>
+                </li>
+                <li class="amenity-item">
+                  <i data-lucide="sparkles" aria-hidden="true"></i>
+                  <span>Xe sạch sẽ, khử mùi</span>
+                </li>
+              </ul>
+            </div>
+
+            <p class="vehicle-note">
+              <i data-lucide="info" aria-hidden="true"></i>
+              Thông tin chi tiết về xe sẽ được cập nhật. Vui lòng liên hệ tài xế để biết thêm.
+            </p>
+          </div>
+
+          <!-- Vehicle Gallery -->
+          <div class="vehicle-gallery reveal-right" aria-label="Hình ảnh xe">
+            <div class="gallery-grid">
+              <button
+                class="gallery-item gallery-item--main"
+                data-lightbox="0"
+                aria-label="Xem ảnh xe bên ngoài – nhấn để phóng to"
+              >
+                <img
+                  src="assets/images/vehicle-exterior_placeholder.svg"
+                  alt="Xe Taxi Gia Đình – ngoại thất sạch sẽ, chuyên nghiệp"
+                  class="gallery-img"
+                  width="480"
+                  height="320"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay" aria-hidden="true">
+                  <i data-lucide="zoom-in" aria-hidden="true"></i>
+                </div>
+              </button>
+              <button
+                class="gallery-item"
+                data-lightbox="1"
+                aria-label="Xem ảnh nội thất xe – nhấn để phóng to"
+              >
+                <img
+                  src="assets/images/vehicle-interior_placeholder.svg"
+                  alt="Nội thất xe Taxi Gia Đình – thoải mái và sạch sẽ"
+                  class="gallery-img"
+                  width="230"
+                  height="155"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay" aria-hidden="true">
+                  <i data-lucide="zoom-in" aria-hidden="true"></i>
+                </div>
+              </button>
+              <button
+                class="gallery-item"
+                data-lightbox="2"
+                aria-label="Xem ảnh xe thứ 3 – nhấn để phóng to"
+              >
+                <img
+                  src="assets/images/vehicle-exterior_placeholder.svg"
+                  alt="Xe Taxi Gia Đình sẵn sàng phục vụ mọi hành trình"
+                  class="gallery-img"
+                  width="230"
+                  height="155"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay" aria-hidden="true">
+                  <i data-lucide="zoom-in" aria-hidden="true"></i>
+                </div>
+              </button>
+            </div>
+            <p class="gallery-hint" aria-hidden="true">
+              <i data-lucide="hand-pointer" aria-hidden="true"></i>
+              Nhấn vào ảnh để xem phóng to
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 05: WHY CHOOSE US
+    ============================================================ -->
+    <section class="why-section section-pad bg-light" id="why-choose" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Vì sao chọn chúng tôi?</span>
+          <h2 class="section-title" id="why-heading">Cam kết của Taxi Gia Đình</h2>
+          <p class="section-desc">Chúng tôi không chỉ đưa bạn đến điểm đến mà còn mang lại trải nghiệm di chuyển đáng nhớ.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card reveal-up" aria-label="Ưu tiên sự an toàn">
+            <div class="why-icon" aria-hidden="true">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3 class="why-title">Ưu tiên sự an toàn</h3>
+            <p class="why-desc">Tài xế lái xe thận trọng, tuân thủ luật giao thông. Xe được kiểm tra định kỳ, bảo hiểm đầy đủ.</p>
+          </div>
+
+          <div class="why-card reveal-up" aria-label="Tôn trọng thời gian">
+            <div class="why-icon" aria-hidden="true">
+              <i data-lucide="clock-check"></i>
+            </div>
+            <h3 class="why-title">Tôn trọng thời gian</h3>
+            <p class="why-desc">Luôn đúng giờ theo lịch hẹn. Chủ động thông báo nếu có thay đổi để khách hàng sắp xếp kịp thời.</p>
+          </div>
+
+          <div class="why-card reveal-up" aria-label="Giá cước minh bạch">
+            <div class="why-icon" aria-hidden="true">
+              <i data-lucide="receipt-text"></i>
+            </div>
+            <h3 class="why-title">Giá cước minh bạch</h3>
+            <p class="why-desc">Báo giá rõ ràng trước chuyến đi, không phát sinh phụ phí bất ngờ. Thanh toán linh hoạt, dễ dàng.</p>
+          </div>
+
+          <div class="why-card reveal-up" aria-label="Phục vụ tận tâm">
+            <div class="why-icon" aria-hidden="true">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+            <h3 class="why-title">Phục vụ tận tâm</h3>
+            <p class="why-desc">Luôn niềm nở, hỗ trợ hành lý và sẵn sàng lắng nghe nhu cầu của từng khách hàng trên mỗi hành trình.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 06: SERVICE AREA
+    ============================================================ -->
+    <section class="area-section section-pad" id="service-area" aria-labelledby="area-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Khu vực hoạt động</span>
+          <h2 class="section-title" id="area-heading">
+            Taxi Gia Đình – Phục vụ nhiều khu vực, đồng hành trên mọi hành trình.
+          </h2>
+          <p class="section-desc">Chúng tôi phục vụ khách hàng tại ba khu vực chính với kinh nghiệm am hiểu địa bàn.</p>
+        </div>
+
+        <div class="area-grid">
+          <!-- Bình Dương -->
+          <div class="area-card reveal-up">
+            <div class="area-card-header">
+              <div class="area-icon" aria-hidden="true">
+                <i data-lucide="building-2"></i>
+              </div>
+              <h3 class="area-name">Khu vực Bình Dương</h3>
+              <p class="area-sub">Thuộc tỉnh Bình Dương trước đây</p>
+            </div>
+            <ul class="area-list" aria-label="Các địa điểm tại khu vực Bình Dương">
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Thủ Dầu Một
+              </li>
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Dĩ An
+              </li>
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Thuận An
+              </li>
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Bến Cát
+              </li>
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Tân Uyên
+              </li>
+            </ul>
+          </div>
+
+          <!-- TP.HCM -->
+          <div class="area-card area-card--featured reveal-up">
+            <div class="area-card-header">
+              <div class="area-icon" aria-hidden="true">
+                <i data-lucide="landmark"></i>
+              </div>
+              <h3 class="area-name">TP. Hồ Chí Minh</h3>
+              <p class="area-sub">Trung tâm và các quận huyện</p>
+            </div>
+            <ul class="area-list" aria-label="Các địa điểm tại TP.HCM">
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Các quận nội thành
+              </li>
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Quận Bình Thạnh, Thủ Đức
+              </li>
+              <li class="area-item">
+                <i data-lucide="plane" aria-hidden="true"></i>
+                Sân bay Tân Sơn Nhất
+              </li>
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Khu vực Bình Chánh, Hóc Môn
+              </li>
+              <li class="area-item">
+                <i data-lucide="route" aria-hidden="true"></i>
+                Các tuyến liên tỉnh
+              </li>
+            </ul>
+          </div>
+
+          <!-- Vũng Tàu -->
+          <div class="area-card reveal-up">
+            <div class="area-card-header">
+              <div class="area-icon" aria-hidden="true">
+                <i data-lucide="waves"></i>
+              </div>
+              <h3 class="area-name">Bà Rịa – Vũng Tàu</h3>
+              <p class="area-sub">Thuộc tỉnh Bà Rịa – Vũng Tàu trước đây</p>
+            </div>
+            <ul class="area-list" aria-label="Các địa điểm tại Bà Rịa – Vũng Tàu">
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Vũng Tàu
+              </li>
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Bà Rịa
+              </li>
+              <li class="area-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Phú Mỹ
+              </li>
+              <li class="area-item">
+                <i data-lucide="route" aria-hidden="true"></i>
+                Các tuyến liên tỉnh
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-wrap reveal-up" aria-label="Bản đồ khu vực phục vụ">
+          <div class="map-placeholder">
+            <i data-lucide="map" aria-hidden="true"></i>
+            <p>Bản đồ khu vực phục vụ</p>
+            <span>Vui lòng cập nhật iframe Google Maps khi có vị trí xuất phát thực tế</span>
+          </div>
+          <!-- Uncomment and replace src when you have a real Google Maps embed URL:
+          <iframe
+            src="https://www.google.com/maps/embed?pb=..."
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Bản đồ khu vực hoạt động Taxi Gia Đình"
+          ></iframe>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 07: CONTACT
+    ============================================================ -->
+    <section class="contact-section section-pad bg-dark" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="contact-content reveal-left">
+            <span class="section-eyebrow eyebrow-light">Liên hệ</span>
+            <h2 class="section-title title-light" id="contact-heading">
+              Bạn đang cần một chuyến xe?
+            </h2>
+            <p class="section-desc desc-light">
+              Hãy liên hệ trực tiếp với Taxi Gia Đình để trao đổi về lịch trình, điểm đón và giá cước.
+            </p>
+
+            <div class="contact-phone-block" aria-label="Số điện thoại liên hệ">
+              <i data-lucide="phone-call" aria-hidden="true"></i>
+              <a href="tel:0900000000" class="contact-phone-number" aria-label="Gọi ngay 0900 000 000">
+                0900.000.000
+              </a>
+            </div>
+
+            <div class="contact-ctas">
+              <a href="tel:0900000000" class="btn btn-primary btn-large" aria-label="Gọi ngay Taxi Gia Đình">
+                <i data-lucide="phone-call" aria-hidden="true"></i>
+                GỌI NGAY
+              </a>
+              <a href="https://zalo.me/0900000000" class="btn btn-zalo btn-large" target="_blank" rel="noopener noreferrer" aria-label="Nhắn tin qua Zalo">
+                <svg class="zalo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20">
+                  <rect width="48" height="48" rx="8" fill="#0068FF"/>
+                  <path d="M38.5 25.5C38.5 32.9 32.3 39 24.5 39C21.9 39 19.5 38.3 17.4 37.1L9.5 39L11.6 31.5C10.2 29.3 9.5 26.8 9.5 24C9.5 16.6 15.7 10 24.5 10C32.3 10 38.5 16.1 38.5 23.5V25.5Z" fill="white"/>
+                  <text x="24" y="27" text-anchor="middle" font-size="10" font-weight="bold" fill="#0068FF" font-family="sans-serif">Zalo</text>
+                </svg>
+                NHẮN ZALO
+              </a>
+            </div>
+
+            <!-- Working Hours & Areas -->
+            <div class="contact-meta">
+              <div class="contact-meta-item">
+                <i data-lucide="clock" aria-hidden="true"></i>
+                <div>
+                  <span class="meta-label">Giờ hoạt động</span>
+                  <span class="meta-value">[Chưa cập nhật – ví dụ: 05:00 – 23:00 hàng ngày]</span>
+                </div>
+              </div>
+              <div class="contact-meta-item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                <div>
+                  <span class="meta-label">Khu vực phục vụ</span>
+                  <span class="meta-value">TP.HCM · Bình Dương · Bà Rịa – Vũng Tàu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact visual -->
+          <div class="contact-visual reveal-right" aria-hidden="true">
+            <div class="contact-card">
+              <div class="contact-card-logo">
+                <img src="assets/images/logo.svg" alt="" width="60" height="60" aria-hidden="true" />
+                <span>Taxi Gia Đình</span>
+              </div>
+              <p class="contact-card-slogan">"Mỗi chuyến đi, một sự an tâm."</p>
+              <div class="contact-card-features">
+                <div class="contact-feature">
+                  <i data-lucide="shield-check"></i>
+                  <span>An toàn</span>
+                </div>
+                <div class="contact-feature">
+                  <i data-lucide="clock"></i>
+                  <span>Đúng giờ</span>
+                </div>
+                <div class="contact-feature">
+                  <i data-lucide="smile"></i>
+                  <span>Thân thiện</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo logo-footer" aria-label="Taxi Gia Đình">
+          <img src="assets/images/logo.svg" alt="Logo Taxi Gia Đình" width="36" height="36" />
+          <span class="logo-text">Taxi <strong>Gia Đình</strong></span>
+        </a>
+        <p class="footer-slogan">"Mỗi chuyến đi, một sự an tâm."</p>
+      </div>
+
+      <div class="footer-info">
+        <p class="footer-phone">
+          <i data-lucide="phone" aria-hidden="true"></i>
+          <a href="tel:0900000000" aria-label="Gọi Taxi Gia Đình">0900.000.000</a>
+        </p>
+        <p class="footer-areas">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          TP.HCM · Bình Dương · Bà Rịa – Vũng Tàu
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-copy">
+          &copy; <span id="year"></span> Taxi Gia Đình. Website giới thiệu dịch vụ taxi cá nhân.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       LIGHTBOX OVERLAY
+  ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to" hidden>
+    <button class="lightbox-close" id="lightbox-close" aria-label="Đóng lightbox">
+      <i data-lucide="x" aria-hidden="true"></i>
+    </button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Ảnh trước">
+      <i data-lucide="chevron-left" aria-hidden="true"></i>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" class="lightbox-img" />
+    </div>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Ảnh tiếp theo">
+      <i data-lucide="chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ============================================================
+       FLOATING ELEMENTS
+  ============================================================ -->
+  <!-- Floating Call Button (Desktop) -->
+  <div class="floating-call desktop-only" aria-hidden="false">
+    <a href="tel:0900000000" class="floating-call-btn" aria-label="Gọi Taxi Gia Đình ngay">
+      <i data-lucide="phone-call" aria-hidden="true"></i>
+      <span>Gọi ngay</span>
+    </a>
+  </div>
+
+  <!-- Mobile Bottom CTA Bar -->
+  <div class="mobile-cta-bar mobile-only" aria-label="Thanh liên hệ nhanh">
+    <a href="tel:0900000000" class="mobile-cta-call" aria-label="Gọi taxi ngay">
+      <i data-lucide="phone-call" aria-hidden="true"></i>
+      <span>GỌI TAXI NGAY</span>
+    </a>
+    <a href="https://zalo.me/0900000000" class="mobile-cta-zalo" target="_blank" rel="noopener noreferrer" aria-label="Nhắn tin Zalo">
+      <i data-lucide="message-circle" aria-hidden="true"></i>
+      <span>ZALO</span>
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Về đầu trang" hidden>
+    <i data-lucide="chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>

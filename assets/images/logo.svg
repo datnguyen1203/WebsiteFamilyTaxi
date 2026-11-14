@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="carGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#bgGrad)" />
+
+  <!-- House / home shape (symbolizing "Gia Đình" = Family) -->
+  <polygon points="100,32 140,68 136,68 136,110 64,110 64,68 60,68" fill="rgba(255,255,255,0.15)" />
+  <polygon points="100,36 136,68 64,68" fill="rgba(255,255,255,0.3)" />
+  <rect x="68" y="68" width="64" height="42" rx="2" fill="rgba(255,255,255,0.15)" />
+
+  <!-- Car body -->
+  <rect x="38" y="112" width="124" height="38" rx="8" fill="url(#carGrad)" />
+  <!-- Car cabin -->
+  <path d="M60,112 L72,90 L128,90 L140,112 Z" fill="white" opacity="0.95" />
+  <!-- Windows -->
+  <path d="M76,112 L84,95 L116,95 L124,112 Z" fill="#2563EB" opacity="0.4" />
+  <!-- Wheels -->
+  <circle cx="66" cy="150" r="14" fill="#0F172A" />
+  <circle cx="66" cy="150" r="6"  fill="#94A3B8" />
+  <circle cx="134" cy="150" r="14" fill="#0F172A" />
+  <circle cx="134" cy="150" r="6"  fill="#94A3B8" />
+  <!-- Headlight -->
+  <rect x="38" y="122" width="10" height="8" rx="2" fill="#FCD34D" />
+  <!-- Tail light -->
+  <rect x="152" y="122" width="10" height="8" rx="2" fill="#EF4444" opacity="0.8"/>
+
+  <!-- Road line -->
+  <rect x="20" y="164" width="160" height="4" rx="2" fill="rgba(255,255,255,0.15)" />
+</svg>
