@@ -94,9 +94,9 @@ Mở file `script.js`, tìm đến đầu file (khoảng dòng 20):
 ```javascript
 const TAXI_CONFIG = {
   brandName:    'Taxi Gia Đình',
-  phone:        '0900000000',         // ← Thay bằng số thật (không có dấu chấm)
-  phoneDisplay: '0900.000.000',       // ← Thay bằng định dạng hiển thị đẹp
-  zaloUrl:      'https://zalo.me/0900000000', // ← Thay số sau zalo.me/
+  phone:        '0327267369',         // ← Thay bằng số thật (không có dấu chấm)
+  phoneDisplay: '0327.267.369',       // ← Thay bằng định dạng hiển thị đẹp
+  zaloUrl:      'https://zalo.me/0327267369', // ← Thay số sau zalo.me/
   workingHours: '05:00 – 23:00 hàng ngày',   // ← Cập nhật giờ làm việc
   serviceAreas: ['TP.HCM', 'Bình Dương', 'Bà Rịa – Vũng Tàu'],
 };

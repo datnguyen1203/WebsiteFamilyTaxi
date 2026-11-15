@@ -22,10 +22,10 @@
 ================================================================= */
 const TAXI_CONFIG = {
   brandName:    'Taxi Gia Đình',
-  phone:        '0900000000',         // Thay bằng số điện thoại thật
-  phoneDisplay: '0900.000.000',       // Định dạng hiển thị
-  zaloUrl:      'https://zalo.me/0900000000', // Thay bằng URL Zalo thật
-  workingHours: '[Chưa cập nhật – ví dụ: 05:00 – 23:00 hàng ngày]',
+  phone:        '0327267369',         // Số điện thoại thật từ banner
+  phoneDisplay: '0327.267.369',       // Định dạng hiển thị chuẩn
+  zaloUrl:      'https://zalo.me/0327267369', // Zalo thật
+  workingHours: '24/7 (Nhận các chuyến sáng sớm 3h - 5h)',
   serviceAreas: ['TP.HCM', 'Bình Dương', 'Bà Rịa – Vũng Tàu'],
 };
 
