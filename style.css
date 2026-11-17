@@ -2894,9 +2894,58 @@ svg { display: block; }
 
 /* Thanh Sticky Action Bar cố định đáy màn hình (Mobile < 768px) */
 @media (max-width: 768px) {
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Tăng khoảng đệm chân trang để không bị thanh đáy che khuất */
   body {
     padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .contact-phone-number {
+    font-size: clamp(1.5rem, 8vw, 2.25rem);
+  }
+
+  .quick-features-bar {
+    margin-bottom: 0;
+  }
+
+  .contact-card {
+    max-width: 300px;
+    margin-inline: auto;
+    padding: var(--space-5);
+  }
+
+  .contact-card-logo {
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+
+  .contact-card-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-card-logo span {
+    font-size: var(--fs-lg);
+  }
+
+  .contact-card-slogan {
+    margin-bottom: var(--space-4);
+  }
+
+  .contact-card-features {
+    gap: var(--space-4);
+  }
+
+  .contact-feature [data-lucide] {
+    width: 20px;
+    height: 20px;
   }
 
   .mobile-sticky-bar {
@@ -2953,7 +3002,7 @@ svg { display: block; }
   /* Cụm 2 nút tròn góc nổi trên mobile: Đặt cao hơn thanh đáy một chút */
   .floating-contact-group {
     bottom: calc(68px + env(safe-area-inset-bottom, 0px)) !important;
-    right: 12px !important;
+    right: 30px !important;
     gap: 10px !important;
   }
 
