@@ -115,13 +115,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Padding bottom to offset mobile CTA bar */
+/* Không cần padding-bottom lớn vì sử dụng 2 nút tròn cố định ở góc màn hình */
 body {
-  padding-bottom: calc(var(--mobile-cta-h) + env(safe-area-inset-bottom, 0px));
-}
-
-@media (min-width: 1024px) {
-  body { padding-bottom: 0; }
+  padding-bottom: 0;
 }
 
 img {
@@ -1615,109 +1611,217 @@ svg { display: block; }
 }
 
 /* -----------------------------------------------------------------
-   16. FLOATING CALL BUTTON
+   16. FLOATING CONTACT BUTTONS (CỤM NÚT TRÒN GỌI & ZALO CỐ ĐỊNH Ở GÓC)
 ----------------------------------------------------------------- */
-.floating-call {
+.floating-contact-group {
   position: fixed;
-  bottom: var(--space-8);
-  right: var(--space-6);
-  z-index: 900;
-}
-
-.floating-call-btn {
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  right: 18px;
+  z-index: 99999;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-2);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 0.85rem 1.5rem;
-  border-radius: var(--radius-full);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
-  box-shadow: var(--shadow-primary), 0 0 0 0 rgb(37 99 235 / 0.4);
-  animation: pulse 2.5s ease-in-out infinite;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  gap: 14px;
 }
 
-@keyframes pulse {
-  0%, 100% { box-shadow: var(--shadow-primary), 0 0 0 0 rgb(37 99 235 / 0.4); }
-  50%       { box-shadow: var(--shadow-primary), 0 0 0 12px rgb(37 99 235 / 0); }
-}
-
-.floating-call-btn:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 16px 40px rgb(37 99 235 / 0.5);
-}
-
-.floating-call-btn [data-lucide] { width: 18px; height: 18px; }
-
-@media (prefers-reduced-motion: reduce) {
-  .floating-call-btn { animation: none; }
-}
-
-/* -----------------------------------------------------------------
-   17. MOBILE BOTTOM CTA BAR
------------------------------------------------------------------ */
-.mobile-cta-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 900;
-  display: flex;
-  height: var(--mobile-cta-h);
-  padding-bottom: env(safe-area-inset-bottom, 0);
-  box-shadow: 0 -4px 24px rgb(0 0 0 / 0.12);
-}
-
-.mobile-cta-call,
-.mobile-cta-zalo {
-  flex: 1;
+/* Nút tròn chung */
+.float-circle-btn {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.04em;
-  transition: filter var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: gentleBlink 3.2s ease-in-out infinite;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.mobile-cta-call:active,
-.mobile-cta-zalo:active { filter: brightness(0.9); }
+.float-circle-btn:hover,
+.float-circle-btn:active {
+  transform: scale(1.1);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
 
-.mobile-cta-call {
-  background-color: var(--color-primary);
+/* 1. NÚT ZALO */
+.float-btn-zalo {
+  background: #0068FF;
+  animation-delay: 1.6s; /* Chớp so le với nút gọi */
+}
+
+.float-zalo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: zaloBounce 3s ease-in-out infinite;
+  animation-delay: 1.6s;
+  z-index: 2;
+}
+
+.float-zalo-icon svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+/* 2 lớp sóng lan tỏa Zalo */
+.float-wave-zalo {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 104, 255, 0.8);
+  animation: rippleCircle 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+.float-wave-outer-zalo {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 104, 255, 0.45);
+  animation: rippleCircle 2.4s ease-out infinite 0.7s;
+  pointer-events: none;
+}
+
+/* 2. NÚT GỌI ĐIỆN THOẠI */
+.float-btn-phone {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  animation-delay: 0s;
+}
+
+.float-phone-icon {
   color: var(--color-white);
-  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: phoneRing 2.4s ease-in-out infinite;
+  z-index: 2;
 }
 
-.mobile-cta-zalo {
-  background-color: var(--color-zalo);
-  color: var(--color-white);
-  flex: 1;
-  border-left: 1px solid rgba(255,255,255,0.2);
+.float-phone-icon svg {
+  width: 28px;
+  height: 28px;
+  display: block;
 }
 
-.mobile-cta-call [data-lucide],
-.mobile-cta-zalo [data-lucide] { width: 18px; height: 18px; }
+/* 2 lớp sóng lan tỏa Gọi điện */
+.float-wave-phone {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid rgba(239, 68, 68, 0.85);
+  animation: rippleCircle 2.4s ease-out infinite;
+  pointer-events: none;
+}
 
-/* Show/hide helpers */
-.mobile-only { display: flex; }
-.desktop-only { display: none; }
+.float-wave-outer-phone {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid rgba(239, 68, 68, 0.45);
+  animation: rippleCircle 2.4s ease-out infinite 0.7s;
+  pointer-events: none;
+}
+
+/* Tooltip hiển thị khi hover trên máy tính */
+.float-tooltip {
+  display: none;
+}
 
 @media (min-width: 1024px) {
-  .mobile-only  { display: none !important; }
-  .desktop-only { display: block; }
+  .float-tooltip {
+    display: block;
+    position: absolute;
+    right: 70px;
+    background: rgba(15, 23, 42, 0.95);
+    color: var(--color-white);
+    padding: 6px 14px;
+    border-radius: var(--radius-md);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .float-circle-btn:hover .float-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hiệu ứng chớp nháy nhẹ (Gentle Blink) */
+@keyframes gentleBlink {
+  0%, 100% {
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.25)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 6px 22px rgba(255, 255, 255, 0.85)) brightness(1.15);
+  }
+}
+
+/* Hiệu ứng sóng lan tỏa đồng tâm (Ripple Circle Wave) */
+@keyframes rippleCircle {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.45);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Rung chuông nhẹ cho icon điện thoại (Phone Ring Vibration) */
+@keyframes phoneRing {
+  0%, 100% { transform: rotate(0) scale(1); }
+  6%, 20% { transform: rotate(-16deg) scale(1.14); }
+  12%, 26% { transform: rotate(16deg) scale(1.14); }
+  32% { transform: rotate(0) scale(1); }
+}
+
+/* Nhịp nảy nhẹ nhàng cho Zalo */
+@keyframes zaloBounce {
+  0%, 100% { transform: scale(1); }
+  12% { transform: scale(1.14); }
+  24% { transform: scale(0.96); }
+  36% { transform: scale(1.08); }
+  48% { transform: scale(1); }
+}
+
+/* Hỗ trợ prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .float-circle-btn,
+  .float-zalo-icon,
+  .float-phone-icon,
+  .float-wave-zalo,
+  .float-wave-outer-zalo,
+  .float-wave-phone,
+  .float-wave-outer-phone {
+    animation: none !important;
+  }
+}
 }
 
 /* -----------------------------------------------------------------
-   18. BACK TO TOP BUTTON
+   17. BACK TO TOP BUTTON (ĐẶT Ở GÓC TRÁI ĐỂ TRÁNH VA CHẠM)
 ----------------------------------------------------------------- */
 .back-to-top {
   position: fixed;
-  bottom: calc(var(--mobile-cta-h) + var(--space-5) + env(safe-area-inset-bottom, 0px));
-  right: var(--space-5);
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  left: 18px;
+  right: auto;
   z-index: 800;
   width: 44px;
   height: 44px;
@@ -1728,6 +1832,10 @@ svg { display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), opacity var(--transition-base);
+  opacity: 0;
+}
   border: 1px solid var(--color-border);
   transition: transform var(--transition-base), box-shadow var(--transition-base), opacity var(--transition-base);
   opacity: 0;
@@ -2446,4 +2554,528 @@ svg { display: block; }
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
+}
+
+/* -----------------------------------------------------------------
+   28. TAXI PHÚ MỸ STYLE UPGRADES (PHONG CÁCH TAXI CHUYÊN NGHIỆP)
+----------------------------------------------------------------- */
+
+/* Top Header Bar */
+.top-header-bar {
+  background: #0F172A;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--fs-xs);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.top-header-left,
+.top-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.top-header-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-header-item a {
+  color: #FCD34D;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.top-header-item a:hover {
+  text-decoration: underline;
+}
+
+/* Tiêu đề 2 màu đặc trưng của taxiphumy.com */
+.title-dual {
+  text-align: center;
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .title-dual { font-size: var(--fs-3xl); }
+}
+
+.title-dual .t-red {
+  color: #DC2626; /* Đỏ nổi bật */
+}
+
+.title-dual .t-blue {
+  color: #0369A1; /* Xanh Navy uy tín */
+}
+
+/* Dải sao vàng trang trí phân cách */
+.stars-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: var(--space-6);
+}
+
+.stars-divider .star-line {
+  width: 45px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #F59E0B);
+}
+
+.stars-divider .star-line.right {
+  background: linear-gradient(90deg, #F59E0B, transparent);
+}
+
+.stars-divider .star-icon {
+  color: #F59E0B;
+  font-size: 14px;
+}
+
+/* Thanh 4 cam kết nhanh màu vàng cam dưới Hero Banner */
+.quick-features-bar {
+  background: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
+  color: var(--color-white);
+  padding: var(--space-4) 0;
+  box-shadow: 0 4px 16px rgba(234, 88, 12, 0.25);
+  margin-bottom: var(--space-12);
+}
+
+.quick-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 900px) {
+  .quick-features-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+.quick-feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.quick-feature-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quick-feature-icon [data-lucide] {
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF;
+}
+
+.quick-feature-text {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Bảng giá cước kẻ ô chuẩn taxiphumy.com */
+.pricing-section {
+  padding-block: var(--space-16);
+  background: var(--color-white);
+}
+
+.pricing-table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  margin-bottom: var(--space-6);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+}
+
+.pricing-table th {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: var(--color-white);
+  padding: 14px 18px;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-table th:last-child {
+  border-right: none;
+}
+
+.pricing-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #E2E8F0;
+  border-right: 1px solid #E2E8F0;
+  font-size: var(--fs-sm);
+  color: var(--color-dark);
+}
+
+.pricing-table td:last-child {
+  border-right: none;
+}
+
+.pricing-table tr:nth-child(even) td {
+  background-color: #F8FAFC;
+}
+
+.pricing-table tr:hover td {
+  background-color: #EFF6FF;
+}
+
+.pricing-car-type {
+  font-weight: 700;
+  color: #0369A1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pricing-price-tag {
+  font-size: var(--fs-base);
+  font-weight: 800;
+  color: #DC2626;
+}
+
+.pricing-notes-box {
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--fs-xs);
+  color: #92400E;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.pricing-notes-box [data-lucide] {
+  width: 20px;
+  height: 20px;
+  color: #D97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Khối Hotline Kêu gọi hành động to bản */
+.callout-hotline-banner {
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  color: var(--color-white);
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(220, 38, 38, 0.35);
+  margin-top: var(--space-10);
+  border: 2px solid #FCA5A5;
+}
+
+.callout-hotline-banner h3 {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.callout-hotline-banner p {
+  font-size: var(--fs-sm);
+  opacity: 0.95;
+  margin-bottom: var(--space-5);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.callout-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.btn-hotline-yellow {
+  background: #F59E0B;
+  color: #0F172A;
+  font-weight: 800;
+  border-color: #F59E0B;
+  padding: 0.9rem 1.8rem;
+  font-size: var(--fs-base);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-hotline-yellow:hover {
+  background: #D97706;
+  border-color: #D97706;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+
+
+/* -----------------------------------------------------------------
+   29. MOBILE STICKY BAR & TỐI ƯU TOÀN DIỆN CHO DI ĐỘNG (MOBILE OPTIMIZATION)
+----------------------------------------------------------------- */
+
+/* Desktop: Ẩn thanh bottom bar */
+@media (min-width: 769px) {
+  .mobile-sticky-bar {
+    display: none !important;
+  }
+  .pricing-mobile-hint {
+    display: none !important;
+  }
+}
+
+/* Gợi ý vuốt ngang bảng giá trên mobile */
+.pricing-mobile-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  color: #0369A1;
+  background: #E0F2FE;
+  border: 1px solid #BAE6FD;
+  border-radius: var(--radius-md);
+  padding: 6px 12px;
+  margin-bottom: var(--space-3);
+  font-weight: 600;
+  text-align: center;
+}
+
+.pricing-mobile-hint [data-lucide] {
+  width: 16px;
+  height: 16px;
+  color: #0284C7;
+  animation: swipeArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes swipeArrow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+/* Thanh Sticky Action Bar cố định đáy màn hình (Mobile < 768px) */
+@media (max-width: 768px) {
+  /* Tăng khoảng đệm chân trang để không bị thanh đáy che khuất */
+  body {
+    padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .mobile-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99998;
+    background: #0F172A;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 12px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .mobile-sticky-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 6px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.15s ease, filter 0.15s ease;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-sticky-btn:active {
+    transform: scale(0.97);
+    filter: brightness(1.1);
+  }
+
+  .mobile-sticky-phone {
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    border: 1px solid #FCA5A5;
+  }
+
+  .mobile-sticky-zalo {
+    background: #0068FF;
+    border: 1px solid #60A5FA;
+  }
+
+  /* Cụm 2 nút tròn góc nổi trên mobile: Đặt cao hơn thanh đáy một chút */
+  .floating-contact-group {
+    bottom: calc(68px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 12px !important;
+    gap: 10px !important;
+  }
+
+  .float-circle-btn {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .float-phone-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .float-zalo-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* Nút Back to top dời lên trên cụm floating */
+  .back-to-top {
+    bottom: calc(185px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 14px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* Bảng giá: Cho phép vuốt ngang mượt mà, không bị tràn trang */
+  .pricing-table-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid #CBD5E1 !important;
+    margin-bottom: var(--space-4) !important;
+  }
+
+  .pricing-table {
+    min-width: 540px !important;
+  }
+
+  .pricing-table th {
+    padding: 10px 10px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+  }
+
+  .pricing-table td {
+    padding: 12px 10px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .pricing-price-tag {
+    font-size: 0.95rem !important;
+  }
+
+  /* Tiêu đề 2 màu trên Mobile */
+  .title-dual {
+    font-size: 1.35rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Hero Section trên mobile */
+  .hero-heading {
+    font-size: 1.65rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .hero-ctas {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .hero-ctas .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.85rem 1rem !important;
+  }
+
+  /* Top Banners 2 ảnh trên mobile: Xếp dọc 1 cột đầy đủ */
+  .top-banners-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .top-banner-card {
+    border-radius: 12px !important;
+  }
+
+  /* Callout Hotline Banner to bản */
+  .callout-hotline-banner {
+    padding: 24px 16px !important;
+    margin-top: 24px !important;
+  }
+
+  .callout-hotline-banner h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .callout-btn-group {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .callout-btn-group .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Màn hình siêu nhỏ (< 400px) */
+@media (max-width: 400px) {
+  .mobile-sticky-btn {
+    font-size: 0.78rem !important;
+    padding: 10px 4px !important;
+    gap: 5px !important;
+  }
+  .mobile-sticky-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .quick-feature-text {
+    font-size: 0.7rem !important;
+  }
 }

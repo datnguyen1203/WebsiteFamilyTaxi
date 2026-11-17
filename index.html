@@ -38,8 +38,8 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Main Stylesheet (Query version v=3.0 giúp cập nhật CSS tức thì trên GitHub Pages) -->
+  <link rel="stylesheet" href="style.css?v=3.2" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -92,33 +92,55 @@
 <body>
 
   <!-- ============================================================
-       HEADER
+       TOP BAR & HEADER (CHUẨN PHONG CÁCH TAXI PHÚ MỸ)
   ============================================================ -->
+  <!-- Top Bar Thông tin & Hotline -->
+  <div class="top-header-bar">
+    <div class="container top-header-inner">
+      <div class="top-header-left">
+        <span class="top-header-item">
+          <i data-lucide="map-pin" style="width:14px;height:14px;color:#FCD34D;"></i>
+          <span>Phục vụ: TP.HCM – Bình Dương – Bà Rịa Vũng Tàu</span>
+        </span>
+        <span class="top-header-item desktop-only">
+          <i data-lucide="clock" style="width:14px;height:14px;color:#FCD34D;"></i>
+          <span>Phục vụ 24/24 – Đặt hẹn trước đúng giờ</span>
+        </span>
+      </div>
+      <div class="top-header-right">
+        <span class="top-header-item">
+          <i data-lucide="phone-call" style="width:14px;height:14px;color:#FCD34D;"></i>
+          <span>Tổng đài 24/7: <a href="tel:0327267369">0327.267.369</a></span>
+        </span>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header" id="site-header" role="banner">
     <div class="container header-inner">
       <!-- Logo -->
       <a href="#hero" class="logo" aria-label="Taxi Gia Đình – Trang chủ">
-        <img src="assets/images/logo.svg" alt="Logo Taxi Gia Đình" width="40" height="40" />
-        <span class="logo-text">Taxi <strong>Gia Đình</strong></span>
+        <img src="assets/images/logo.svg" alt="Logo Taxi Gia Đình" width="42" height="42" />
+        <span class="logo-text">Taxi <strong style="color:#00A651;">Gia Đình</strong></span>
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="main-nav" role="navigation" aria-label="Điều hướng chính">
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link">Trang chủ</a></li>
+          <li><a href="#bang-gia" class="nav-link">Bảng giá cước</a></li>
           <li><a href="#why-choose" class="nav-link">Cam kết dịch vụ</a></li>
-          <li><a href="#services" class="nav-link">Dịch vụ</a></li>
-          <li><a href="#quy-trinh" class="nav-link">Cách đặt xe</a></li>
+          <li><a href="#services" class="nav-link">Dịch vụ xe</a></li>
           <li><a href="#vehicle" class="nav-link">Phương tiện</a></li>
           <li><a href="#service-area" class="nav-link">Khu vực</a></li>
           <li><a href="#contact" class="nav-link">Liên hệ</a></li>
         </ul>
       </nav>
 
-      <!-- CTA Button Desktop -->
-      <a href="tel:0327267369" class="btn btn-primary header-cta" aria-label="Gọi ngay cho Taxi Gia Đình">
+      <!-- CTA Button Desktop chuẩn phong cách Hotline đỏ -->
+      <a href="tel:0327267369" class="btn header-cta" style="background:#DC2626; border-color:#DC2626; color:#fff; font-weight:700;" aria-label="Hotline Taxi Gia Đình">
         <i data-lucide="phone-call" aria-hidden="true"></i>
-        Gọi: 0327.267.369
+        HOTLINE: 0327.267.369
       </a>
 
       <!-- Hamburger Button Mobile -->
@@ -134,16 +156,16 @@
       <nav>
         <ul class="mobile-nav-list">
           <li><a href="#hero" class="mobile-nav-link">Trang chủ</a></li>
+          <li><a href="#bang-gia" class="mobile-nav-link">Bảng giá cước taxi</a></li>
           <li><a href="#why-choose" class="mobile-nav-link">Cam kết dịch vụ</a></li>
-          <li><a href="#services" class="mobile-nav-link">Dịch vụ</a></li>
-          <li><a href="#quy-trinh" class="mobile-nav-link">Cách đặt hẹn xe</a></li>
-          <li><a href="#vehicle" class="mobile-nav-link">Phương tiện</a></li>
+          <li><a href="#services" class="mobile-nav-link">Dịch vụ xe</a></li>
+          <li><a href="#vehicle" class="mobile-nav-link">Phương tiện xe điện & Limo</a></li>
           <li><a href="#service-area" class="mobile-nav-link">Khu vực phục vụ</a></li>
           <li><a href="#contact" class="mobile-nav-link">Liên hệ trực tiếp</a></li>
           <li>
-            <a href="tel:0327267369" class="btn btn-primary mobile-nav-cta" aria-label="Gọi ngay cho Taxi Gia Đình">
+            <a href="tel:0327267369" class="btn mobile-nav-cta" style="background:#DC2626; border-color:#DC2626; color:#fff; font-weight:700;" aria-label="Gọi ngay cho Taxi Gia Đình">
               <i data-lucide="phone-call" aria-hidden="true"></i>
-              GỌI ĐẶT XE: 0327.267.369
+              GỌI HOTLINE: 0327.267.369
             </a>
           </li>
         </ul>
@@ -196,6 +218,48 @@
         </div>
       </div>
     </section>
+
+    <!-- ============================================================
+         THANH 4 CAM KẾT NHANH (PHONG CÁCH ĐẶC TRƯNG TAXI PHÚ MỸ)
+    ============================================================ -->
+    <div class="quick-features-bar">
+      <div class="container">
+        <div class="quick-features-grid">
+          <div class="quick-feature-item">
+            <div class="quick-feature-icon">
+              <i data-lucide="zap"></i>
+            </div>
+            <div class="quick-feature-text">
+              <span>ĐẶT XE NHANH CHÓNG</span>
+            </div>
+          </div>
+          <div class="quick-feature-item">
+            <div class="quick-feature-icon">
+              <i data-lucide="car"></i>
+            </div>
+            <div class="quick-feature-text">
+              <span>XE VINFAST VF6 & LIMO</span>
+            </div>
+          </div>
+          <div class="quick-feature-item">
+            <div class="quick-feature-icon">
+              <i data-lucide="badge-dollar-sign"></i>
+            </div>
+            <div class="quick-feature-text">
+              <span>GIÁ THÀNH CẠNH TRANH</span>
+            </div>
+          </div>
+          <div class="quick-feature-item">
+            <div class="quick-feature-icon">
+              <i data-lucide="clock"></i>
+            </div>
+            <div class="quick-feature-text">
+              <span>PHỤC VỤ 24/24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ============================================================
          SECTION 01: HERO
@@ -288,15 +352,29 @@
     </section>
 
     <!-- ============================================================
+         SECTION BẢNG GIÁ CƯỚC TAXI TRỌN GÓI (PHONG CÁCH TAXI PHÚ MỸ)
+    ============================================================ -->
+
+
+    <!-- ============================================================
          SECTION 02: 3 LỢI ÍCH VƯỢT TRỘI KHI SỬ DỤNG DỊCH VỤ
     ============================================================ -->
     <section class="benefits-section section-pad" id="why-choose" aria-labelledby="benefits-heading">
       <div class="container">
         <div class="section-header reveal-up">
           <span class="section-eyebrow">Lợi ích dành cho bạn</span>
-          <h2 class="section-title" id="benefits-heading">
-            3 Lợi Ích Vượt Trội Khi Đặt Xe Tại Taxi Gia Đình
+          <h2 class="title-dual" id="benefits-heading">
+            <span class="t-red">VÌ SAO CHỌN</span> <span class="t-blue">TAXI GIA ĐÌNH</span>
           </h2>
+          <div class="stars-divider" aria-hidden="true">
+            <div class="star-line"></div>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <div class="star-line right"></div>
+          </div>
           <p class="section-desc">
             Chúng tôi luôn đặt sự an tâm, tính đúng giờ và quyền lợi minh bạch của khách hàng lên hàng đầu trên mỗi hành trình.
           </p>
@@ -377,7 +455,18 @@
       <div class="container">
         <div class="section-header reveal-up">
           <span class="section-eyebrow">Đặt xe nhanh chóng</span>
-          <h2 class="section-title" id="steps-heading">3 Bước Đặt Xe Hẹn Trước – Đơn Giản & Chắc Chắn</h2>
+          <h2 class="title-dual" id="steps-heading">
+            <span class="t-red">QUY TRÌNH</span> <span class="t-blue">ĐẶT XE DỄ DÀNG</span>
+          </h2>
+          <div class="stars-divider" aria-hidden="true">
+            <div class="star-line"></div>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <div class="star-line right"></div>
+          </div>
           <p class="section-desc">Không cần cài app phức tạp, không cần tài khoản. Bạn chỉ cần nhấc máy hoặc gửi 1 tin nhắn Zalo:</p>
         </div>
 
@@ -426,7 +515,18 @@
       <div class="container">
         <div class="section-header reveal-up">
           <span class="section-eyebrow">Dịch vụ phục vụ</span>
-          <h2 class="section-title" id="services-heading">Các Dịch Vụ Xe Gia Đình Được Khách Tin Chọn</h2>
+          <h2 class="title-dual" id="services-heading">
+            <span class="t-red">CÁC DỊCH VỤ</span> <span class="t-blue">XE NỔI BẬT</span>
+          </h2>
+          <div class="stars-divider" aria-hidden="true">
+            <div class="star-line"></div>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <div class="star-line right"></div>
+          </div>
           <p class="section-desc">Phục vụ tận tâm, đúng giờ, chu đáo như xe của người nhà:</p>
         </div>
 
@@ -529,6 +629,8 @@
         </div>
       </div>
     </section>
+      </div>
+    </div>
 
     <!-- ============================================================
          SECTION 05: PHƯƠNG TIỆN & THÔNG TIN DỊCH VỤ
@@ -537,7 +639,18 @@
       <div class="container">
         <div class="section-header reveal-up">
           <span class="section-eyebrow">Dòng xe phục vụ</span>
-          <h2 class="section-title" id="vehicle-heading">Xe VinFast VF6 & Limousine Cao Cấp</h2>
+          <h2 class="title-dual" id="vehicle-heading">
+            <span class="t-red">PHƯƠNG TIỆN XE</span> <span class="t-blue">VINFAST VF6 & LIMO VIP</span>
+          </h2>
+          <div class="stars-divider" aria-hidden="true">
+            <div class="star-line"></div>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <div class="star-line right"></div>
+          </div>
           <p class="section-desc">Phục vụ xe điện VinFast VF6 êm ái không mùi và dòng xe Limousine VIP sang trọng, rộng rãi cho mọi chuyến đi:</p>
         </div>
 
@@ -636,6 +749,8 @@
         </div>
       </div>
     </section>
+      </div>
+    </div>
 
     <!-- ============================================================
          SECTION 06: KHU VỰC PHỤC VỤ CHÍNH
@@ -644,9 +759,18 @@
       <div class="container">
         <div class="section-header reveal-up">
           <span class="section-eyebrow">Địa bàn hoạt động</span>
-          <h2 class="section-title" id="area-heading">
-            Đón Trả Tận Nơi Tại 3 Khu Vực Trọng Điểm
+          <h2 class="title-dual" id="area-heading">
+            <span class="t-red">KHU VỰC PHỤC VỤ</span> <span class="t-blue">ĐÓN TRẢ TẬN NƠI</span>
           </h2>
+          <div class="stars-divider" aria-hidden="true">
+            <div class="star-line"></div>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <div class="star-line right"></div>
+          </div>
           <p class="section-desc">Tài xế am hiểu từng cung đường, ngõ hẻm, đón tận cửa nhà không để khách phải đi bộ:</p>
         </div>
 
@@ -740,6 +864,8 @@
         </div>
       </div>
     </section>
+      </div>
+    </div>
 
     <!-- ============================================================
          SECTION 07: CONTACT (KÊU GỌI HÀNH ĐỘNG GỌI / ZALO)
@@ -758,7 +884,7 @@
 
             <div class="contact-phone-block" aria-label="Số điện thoại liên hệ trực tiếp">
               <i data-lucide="phone-call" aria-hidden="true"></i>
-              <a href="tel:0327267369" class="contact-phone-number" aria-label="Gọi ngay 0900 000 000">
+              <a href="tel:0327267369" class="contact-phone-number" aria-label="Gọi ngay 0327.267.369">
                 0327.267.369
               </a>
             </div>
@@ -824,6 +950,8 @@
         </div>
       </div>
     </section>
+      </div>
+    </div>
   </main>
 
   <!-- ============================================================
@@ -879,27 +1007,67 @@
   </div>
 
   <!-- ============================================================
-       FLOATING ELEMENTS (ĐẢM BẢO KHÁCH BẤM GỌI/ZALO TRONG TÍCH TẮC)
+       FLOATING CONTACT BUTTONS (CỤM NÚT TRÒN GỌI & ZALO CỐ ĐỊNH Ở GÓC MÀN HÌNH)
   ============================================================ -->
-  <!-- Floating Call Button (Desktop) -->
-  <div class="floating-call desktop-only" aria-hidden="false">
-    <a href="tel:0327267369" class="floating-call-btn" aria-label="Gọi Taxi Gia Đình ngay">
-      <i data-lucide="phone-call" aria-hidden="true"></i>
-      <span>Gọi Ngay (24/7)</span>
+  <div class="floating-contact-group" aria-label="Nút liên hệ nhanh">
+    <!-- Nút Zalo tròn -->
+    <a
+      href="https://zalo.me/0327267369"
+      class="float-circle-btn float-btn-zalo"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Nhắn tin Zalo với tài xế"
+      title="Nhắn tin Zalo: 0327.267.369"
+    >
+      <span class="float-wave float-wave-zalo" aria-hidden="true"></span>
+      <span class="float-wave-outer float-wave-outer-zalo" aria-hidden="true"></span>
+      <span class="float-zalo-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+          <rect width="48" height="48" rx="14" fill="#0068FF"/>
+          <path d="M38.5 25.5C38.5 32.9 32.3 39 24.5 39C21.9 39 19.5 38.3 17.4 37.1L9.5 39L11.6 31.5C10.2 29.3 9.5 26.8 9.5 24C9.5 16.6 15.7 10 24.5 10C32.3 10 38.5 16.1 38.5 23.5V25.5Z" fill="white"/>
+          <text x="24" y="27" text-anchor="middle" font-size="11" font-weight="bold" fill="#0068FF" font-family="'Be Vietnam Pro',sans-serif">Zalo</text>
+        </svg>
+      </span>
+      <span class="float-tooltip">Chat Zalo Báo Giá</span>
+    </a>
+
+    <!-- Nút Gọi điện thoại tròn -->
+    <a
+      href="tel:0327267369"
+      class="float-circle-btn float-btn-phone"
+      aria-label="Gọi điện thoại hotline 0327.267.369"
+      title="Gọi ngay: 0327.267.369"
+    >
+      <span class="float-wave float-wave-phone" aria-hidden="true"></span>
+      <span class="float-wave-outer float-wave-outer-phone" aria-hidden="true"></span>
+      <span class="float-phone-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </span>
+      <span class="float-tooltip">Gọi Hotline: 0327.267.369</span>
     </a>
   </div>
 
-  <!-- Mobile Bottom CTA Bar (Thanh Cố Định Ở Dưới Điện Thoại) -->
-  <div class="mobile-cta-bar mobile-only" aria-label="Thanh liên hệ nhanh">
-    <a href="tel:0327267369" class="mobile-cta-call" aria-label="Gọi hẹn xe ngay">
-      <i data-lucide="phone-call" aria-hidden="true"></i>
-      <span>GỌI ĐẶT XE NGAY</span>
+  <!-- ============================================================
+       MOBILE STICKY ACTION BAR (THANH ĐÁY GỌI & ZALO CHUYÊN DỤNG CHO MOBILE)
+  ============================================================ -->
+  <aside class="mobile-sticky-bar" aria-label="Thanh liên hệ nhanh trên điện thoại">
+    <a href="tel:0327267369" class="mobile-sticky-btn mobile-sticky-phone" aria-label="Gọi điện thoại Hotline 0327.267.369">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>GỌI 0327.267.369</span>
     </a>
-    <a href="https://zalo.me/0327267369" class="mobile-cta-zalo" target="_blank" rel="noopener noreferrer" aria-label="Nhắn tin Zalo">
-      <i data-lucide="message-circle" aria-hidden="true"></i>
-      <span>ZALO BÁO GIÁ</span>
+    <a href="https://zalo.me/0327267369" target="_blank" rel="noopener noreferrer" class="mobile-sticky-btn mobile-sticky-zalo" aria-label="Nhắn tin Zalo nhận báo giá ngay">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22" aria-hidden="true">
+        <rect width="48" height="48" rx="10" fill="#0068FF"/>
+        <path d="M38.5 25.5C38.5 32.9 32.3 39 24.5 39C21.9 39 19.5 38.3 17.4 37.1L9.5 39L11.6 31.5C10.2 29.3 9.5 26.8 9.5 24C9.5 16.6 15.7 10 24.5 10C32.3 10 38.5 16.1 38.5 23.5V25.5Z" fill="white"/>
+        <text x="24" y="27" text-anchor="middle" font-size="11" font-weight="bold" fill="#0068FF" font-family="'Be Vietnam Pro',sans-serif">Zalo</text>
+      </svg>
+      <span>CHAT ZALO NGAY</span>
     </a>
-  </div>
+  </aside>
 
   <!-- Back to Top Button -->
   <button class="back-to-top" id="back-to-top" aria-label="Về đầu trang" hidden>
@@ -907,6 +1075,6 @@
   </button>
 
   <!-- Main Script -->
-  <script src="script.js"></script>
+  <script src="script.js?v=3.0"></script>
 </body>
 </html>
